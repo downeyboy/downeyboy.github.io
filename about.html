@@ -1,0 +1,91 @@
+---
+layout: page
+title: "About Author"
+description: "This is downey."
+header-img: "img/blog-about-bg.jpg"
+---
+
+<!-- Language Selector -->
+<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select> -->
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <!--copied from markdown -->
+
+    <p>苦逼的嵌入式工程师,扎根深圳</p>
+    <p>懂一点底层</p>
+    <p>懂一点应用</p>
+    <p>懂一点算法</p>
+    <p>linux的脑残粉，虽然很菜，但是热爱</p>
+    
+    
+    <p>业余爱好：</p>
+    <p>        健身，曾经有过八块腹肌，现在它倒是变得越来越成熟、越来越内敛</p>
+    <p>        足球、羽毛球，曾经....算了，依旧很菜，乐意喜欢</p>
+    <p>        Dota2,哎，时间越来越少，都玩不了几把了</p>
+    <p></p>
+    <p></p>
+    <p>最大的愿望是一夜暴富，哪一夜都行</p>
+    <p></p>
+    <p></p>
+    <p>据说健身和写代码都会导致秃顶，所以第二愿望是保持一头浓密的秀发到退休。</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p>如果有志同道合的朋友，欢迎找我一起嗨~</p>
+
+    <p></p>
+    
+    <h5>Talks</h5>
+
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+    </ul>
+</div>
+
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
