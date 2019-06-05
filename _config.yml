@@ -57,8 +57,8 @@ kramdown:
 
 
 #register a new OAuth application URL : https://github.com/settings/applications
-#The Homepage and callback URL are your github URL,such as : https://downeyboy.github.io/
-
+#The Homepage are your github URL,such as : https://downeyboy.github.io/
+#The callback url is your blog url:www.downeyboy.com
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
