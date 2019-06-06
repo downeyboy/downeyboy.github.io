@@ -6,7 +6,7 @@ date:       2019-05-15
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
-tags:	    Makefile
+tags:	    linux Makefile
 ---
 
 

@@ -6,7 +6,7 @@ date:       2019-05-18
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
-tags:	    Makefile
+tags:	    linux Makefile
 ---
 
 # 深入解析Makefile系列(3) -- 函数的使用
