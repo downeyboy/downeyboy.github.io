@@ -17,9 +17,9 @@ tags:	    linux automake
 * ./configure
 * make
 * sudo make install
-这三个步骤将软件安装到系统中。  
-在上一章节中主要用到了5个文件分别是：  
+这三个步骤将软件安装到系统中。   
 
+在上一章节中主要用到了5个文件分别是：  
 
 ```  
 src/main.c src/Makefile.am README Makefile.am configure.ac 
@@ -73,7 +73,7 @@ AC_OUTPUT
 * AC_INIT ：表示对Autoconf的初始化，包括当前源码包的包名，当前源码包的版本以及提交bug的地址，如果是个人源码包，可以留下自己的邮箱。
 * AM_INIT_AUTOMAKE ：表示对Automake的初始化，它的语法可以是这样：
     ```  
-            AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+    AM_INIT_AUTOMAKE([-Wall -Werror foreign])
     ```  
     AM_INIT_AUTOMAKE括号中的值通常是一系列的编译参数，比如上述的 -Wall -Werror foreign都是gcc的编译参数。(尽管这个宏在上述**configure.ac**文件中没有出现，但是它值得被提及)    
 

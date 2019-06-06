@@ -76,17 +76,12 @@ src/main.c src/Makefile.am README Makefile.am configure.ac
 ```  
 #include <config.h>
 #include <stdio.h>
-```  
 
-
-
-```  
-int
-main (void)
+int main (void)
 {
-puts ("Hello World!");
-puts ("This is " PACKAGE_STRING ".");
-return 0;
+    puts ("Hello World!");
+    puts ("This is " PACKAGE_STRING ".");
+    return 0;
 }
 ```  
 
@@ -146,12 +141,30 @@ src/Makefile
 AC_OUTPUT
 ```  
 
+****  
 
+### 创建公共文件
+在新版本中的autotools中，除了上述源文件，还要求以下几个文件的存在：
+```
+AUTHORS   COPYING   ChangeLog   NEWS
+```
+AUTHORS包含作者信息。    
+
+COPYING中包含版权信息。   
+
+ChangeLog包含变更的版本信息，通常这个文件对于包的维护是至关重要的。   
+
+NEWS包含一些新发布的包信息。  
+
+所以，我们通过以下指令手动创建这些文件,然后填入相应信息(可选，空文件可以，但是文件必须存在)：
+```
+touch AUTHORS COPYING ChangeLog NEWS
+```
 
 ****  
 
 ### 调用autotools指令
-创建并配置完上述五个文件，我们就可以开始生成源码包的工作了。  
+创建并配置完上述五个文件和生成了一些控制文件，我们就可以开始生成源码包的工作了。  
 
 首先，执行下面的指令生成一些必要的文件：
 
