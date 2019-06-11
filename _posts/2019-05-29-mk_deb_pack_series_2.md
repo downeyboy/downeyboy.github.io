@@ -279,13 +279,23 @@ override_表示覆盖写，以空指令覆盖dh_usrlocal就可以达到目的了
 
 ****  
 
-### 使用脚本生成deb包
+## 使用脚本生成deb包
 在所有文件修改完成之后，就可以使用以下指令来编译deb包了，在系统生成的与debian同级目录下输入：
 ```
 debuild -us -uc
 ```
 不出意外，就会在debian的父目录中生成一系列的文件，其中一个以.deb结尾的就是我们要的deb包了。  
 
+**** 
+
+## debuild使用总结
+指令中夹杂着说明总是显得没那么清晰，这里总结一下debuild自动构建软件包指令流程：
+* 准备源码
+* 对源码进行打包
+* 使用debmake生成相应的控制文件，编辑控制文件，主要是debian/rules和debian/changelog
+* 使用debuild -us -uc指令进行打包
+
+**同样的，你也可以在从github[获取源码](https://github.com/linux-downey/sbuild_debuild_example)自己尝试编译deb包(编译方式请参考readme)** 
 
 
 ****  
@@ -464,6 +474,12 @@ override_dh_auto_build:
 
 在一些中小型项目中，通过debmake自动生成的文件可以直接使用，但是在复杂的项目中，我们就需要对rules进行自定义才能完成相应的需求，或者对其进行针对性的优化。  
 
+
+## 获取源码
+从github[获取源码](https://github.com/linux-downey/sbuild_debuild_example)自己尝试编译deb包(编译方式请参考github仓库readme)，深入了解debuild的使用。  
+
+
+***  
 
 参考资料[官方文档](https://www.debian.org/doc/manuals/maint-guide/dreq.en.html#customrules)，建议参考英文文档，中文有部分翻译错误！
 
