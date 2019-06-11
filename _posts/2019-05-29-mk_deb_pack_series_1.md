@@ -138,15 +138,15 @@ touch  changelog   control   copyright   postinst   postrm
 ```   
 
 #### 各字段的含义
-第一行：Source ： 软件包名，且仅是软件包名，不包含版本架构之类的信息。  
-第二行：Priority ：描述了该软件包的优先级，软件包的优先级有：required(系统必须)、important(重要)、standard(标准，默认安装)或者optional(可选，默认不安装，需自行安装)，常规优先级(不与其他包冲突)的包可以改为optional，extra这个选项已经被弃用了，可以用optional来代替。
-第三行：Maintainer： 维护者信息，可以添加姓名和电子邮件地址。  
-第四行：Build-Depends ： 列出编译该软件包需要的其他软件包，这里的diodon只是一个演示，并不起实际作用，而对于某些归属于build-essential的软件，例如gcc 和 make等就不需要列出。  
-第五行：Standards-Version ： 软件所依据的debian标准版本号
-第六行： Version ：当前deb包的版本号。  
-第七行：Package ：二进制包的包名
-第八行： Architecture ：目标机器上的运行架构，由于当前软件包是在amd64平台上编译的二进制包，所以只支持amd64平台.除了指定对应的目标平台以外，该选项还可取值为：any、all。一般而言，源码、文本、图像或者解释型语言脚本独立与体系架构，可以使用all和any，如果值为all，那么将强制软件包只能编译平台无关的包。       
-第九行： Description ：当前包的描述，短描述直接写在第一场，更详细的描述可以另起一行。  
+* 第一行：Source ： 软件包名，且仅是软件包名，不包含版本架构之类的信息。  
+* 第二行：Priority ：描述了该软件包的优先级，软件包的优先级有：required(系统必须)、important(重要)、standard(标准，默认安装)或者optional(可选，默认不安装，需自行安装)，常规优先级(不与其他包冲突)的包可以改为optional，extra这个选项已经被弃用了，可以用optional来代替。
+* 第三行：Maintainer： 维护者信息，可以添加姓名和电子邮件地址。  
+* 第四行：Build-Depends ： 列出编译该软件包需要的其他软件包，这里的diodon只是一个演示，并不起实际作用，而对于某些归属于build-essential的软件，例如gcc 和 make等就不需要列出。  
+* 第五行：Standards-Version ： 软件所依据的debian标准版本号
+* 第六行： Version ：当前deb包的版本号。  
+* 第七行：Package ：二进制包的包名    
+* 第八行： Architecture ：目标机器上的运行架构，由于当前软件包是在amd64平台上编译的二进制包，所以只支持amd64平台.除了指定对应的目标平台以外，该选项还可取值为：any、all。一般而言，源码、文本、图像或者解释型语言脚本独立与体系架构，可以使用all和any，如果值为all，那么将强制软件包只能编译平台无关的包。       
+* 第九行： Description ：当前包的描述，短描述直接写在第一场，更详细的描述可以另起一行。  
 
 
 ****  

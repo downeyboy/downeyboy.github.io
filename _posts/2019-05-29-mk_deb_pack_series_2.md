@@ -146,8 +146,7 @@ I: *** start packaging in "debhello-1.0.0". ***
 I: provide debhello_1.0.0.orig.tar.gz for non-native Debian package
 I: pwd = "/home/huangdao/blog_mkdeb"
 E: missing "debhello-1.0.0.tar.gz".
-```   
-
+```
 这个错误是因为你没有将源码进行压缩，或者压缩之后的文件名使用了非标准命名，又或者是压缩文件放置到了错误的目录下。    
 
 ****  
@@ -163,8 +162,7 @@ para = debmake.para.para(para)
   File "/usr/lib/python3/dist-packages/debmake/para.py", line 44, in para
 debmail = os.getlogin() + '@localhost'
 FileNotFoundError: [Errno 2] No such file or directory
-```  
-
+```
 这个问题事实上是python的一个bug，在某些python版本会出现，原因是无法获取用户名。解决方案有两个：  
 1、设置环境变量，主动设置自己的用户信息，也就是包的作者信息，就不需要去通过python脚本获取用户名。  
 ```
@@ -172,9 +170,7 @@ export DEBEMAIL="linux_downey@gmail.com"
 export DEBFULLNAME="downey_boy"
 ```
 推荐使用这种方法，最后设置的"DEBEMAIL"和"DEBFULLNAME"变量值会在control文件中使用。  
-
 2、找到脚本出错位置，然后修改它，对比第一种方案而言，这是治本的办法，但是修改系统里面的东西总是需要非常谨慎的。首先根据提示找到 **/usr/lib/python3/dist-packages/debmake/para.py**出错未见的44行，既然这条语句有问题，那我们就将其换一种获取用户名的方法：  
-
 ```  
 import os, pwd
 os.getlogin = lambda: pwd.getpwuid(os.getuid())[0]
@@ -299,7 +295,7 @@ debuild -us -uc
 
 所以，我们需要继续深入，才能了解更多相关的知识。   
 
-使用自动化构建工具编译deb包最主要的两个部分是：rules规则和debuild指令，我们就来看看这两个指令。  
+使用自动化构建工具编译deb包最主要的两个部分是：rules规则和debuild指令，我们就来看看这两个部分。  
 
 
 ****  
