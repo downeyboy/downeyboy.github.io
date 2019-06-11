@@ -284,7 +284,8 @@ gpg --export-secret-subkeys $key_num
 
 #### 验证gpg私钥导出
 我们可以使用以下方法验证gpg的主私钥是否被删除：
-* 使用**gpg --export-secret-keys $KEY > sec.key**试图导出主私钥，系统会直接提示：
+* 使用**gpg --export-secret-keys $KEY > sec.key**试图导出主私钥，系统会直接提示：  
+
    ```
    gpg: WARNING: nothing exported
    ```
