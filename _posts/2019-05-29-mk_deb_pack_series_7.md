@@ -98,7 +98,7 @@ SignWith: 229B2D28
 APT工具根据这些描述信息的内容来识别一个deb仓库，下面来分析其中相应的字段：
 * Origin ： 软件包来源，一般使用URL
 * Label ： 软件包标签
-* Codename ： 目标明天的发行版代号，对于ubuntu有"xenial"，"trusty"，"jessie"等等，根据目标机器的codename而设置。     
+* Codename ： 目标平台的发行版代号，对于ubuntu有"xenial"，"trusty"，"jessie"等等，根据目标机器的codename而设置。     
 可以在机器上使用以下命令查看codename：
     ```
     lsb_release -c

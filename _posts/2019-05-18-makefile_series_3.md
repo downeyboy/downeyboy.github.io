@@ -117,7 +117,7 @@ ${TEXT : %.c=%.o}
 
 ### \$(filter pattern…,text) 和 \$(filter-out pattern…,text)
 **函数介绍：**  
-* 函数作用 ： 过滤作用，将符合模式规则的文本挑选出来。  
+* 函数作用 ： 过滤作用，将符合模式规则的text中的文本挑选出来。  
 * 参数：
     * pattern  过滤的模式规则
     * text  将要处理的文本
@@ -134,7 +134,27 @@ ${RESULT}结果：
 foo.c bar.c
 ```  
 
-filter-out()函数的作用与filter相反，运用模式规则进行反选，返回反选的结果。  
+filter-out()函数的作用与filter相反，运用模式规则进行反选，返回反选的结果。   
+
+值得注意的是，这里的pattern不一定是带 % 的模式匹配，也可以是文件列表。  
+
+filter(filter-out)函数返回的是text文本中符合(不符合)条件的项目，我们再来看下面的示例：
+```  
+TEXT := foo.c
+TEXT_P := foo.c bar.c main.c
+RESULT = $(filter $(TEXT_P),$(TEXT))
+RESULT_OUT = $(filter-out $(TEXT_P),$(TEXT))
+```  
+
+${RESULT} 和 $(RESULT_OUT)结果：
+```  
+foo.c 
+(空)
+```  
+
+从上述示例中看到，从以TEXT_P 去 TEXT 中进行匹配，RESULT的值为foo.c,但是为什么 RESULT_OUT 是空，而不是bar.c main.c呢？    
+
+请看上面本函数的函数作用：**将符合模式的text中的文本挑选出来**，TEXT只有foo.c，但是foo.c被反选出去，所以结果为空。  
 
 ****  
 
