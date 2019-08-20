@@ -45,7 +45,7 @@ bar = bar.mk
 include *.c $(bar)  
 ```  
 
-被包含的文件不需要采用makefile默认的名称：比如GNUmakefile，makefile或Makefile。  
+被包含的文件不需要采用makefile默认的名称：GNUmakefile，makefile或Makefile。  
 
 通常情况下，使用include的场景是：  
 
@@ -77,6 +77,22 @@ include inc.mk
 定义一个SRC变量，并包含inc.mk文件中的操作，最后$(SRC)的结果为：foo.c bar.c.   
 
 表明文件的包含关系中共享变量，我们可以直接简单地理解为将被包含文件中的数据添加到主文件中，这和C/C++中的include操作是一致的。    
+
+#### 目标包含的循环处理
+
+如果被包含的文件不存在，将会发生什么事呢？   
+
+首先，Makefile在检测到include的指令时，尝试寻找被包含的文件，发现目标文件不存在。   
+
+扫描完整个Makefile之后，寻找是否有生成目标文件的规则，如果有，则生成该被包含的目标文件，第二次执行Makefile的扫描时该文件就Makfile搜索到并成功包含进来。   
+
+如果在第二次扫描之后没有发现生成被包含文件的规则，程序报错，且退出当前Makefile的执行。  
+
+在某些情况下，如果我们不确定被包含文件是否存在，且不希望在不存在时报错，可以使用下面的包含指令：
+```
+-include file
+```
+即：在include添加 "-" ，就可以忽略报错而继续运行Makefile。  
 
 **** 
 
