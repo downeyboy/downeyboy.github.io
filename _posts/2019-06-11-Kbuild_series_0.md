@@ -1,8 +1,8 @@
 ---
 layout:     post   				    
-title:      linux Kbuild详解系列 		
+title:      linux Kbuild详解系列(0) 		
 subtitle:      -- 内核的编译操作 
-date:       2019-06-10 				
+date:       2019-06-11 				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
