@@ -2,7 +2,7 @@
 layout:     post   				    
 title:      C语言数组与指针的那些事儿 		
 subtitle:      
-date:       2018-10-10 				
+date:       2018-09-27 				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
