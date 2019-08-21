@@ -231,10 +231,8 @@ error: invalid operands to binary - (have ‘char (*)[5]’ and ‘char *’)
 ****  
 
 ## 二维数组和二级指针
-
-```  
+  
 "既然一维数组和指针在一定程度上可以"混合使用",那么二维数组肯定也是可以使用二维指针来访问了" —— 某不知名程序员语录  
-```  
 
 问：上面这句话有没有什么问题？  
 
@@ -245,7 +243,7 @@ error: invalid operands to binary - (have ‘char (*)[5]’ and ‘char *’)
 话不多说，我们先看下面代码：
 
 ```  
-char buf[2][2]={{1,2},{3,4}};
+char buf[2][2]={ {1,2}, {3,4} };
 char **p = buf;
 printf("buf[] = %d,%d,%d,%d\r\n",p[0][0],p[0][1],p[1][1],p[1][2]);
 ```  
@@ -267,7 +265,7 @@ Segmentation fault (core dumped)
 
 代码1：
 ```  
-char buf[2][2]={{1,2},{3,4}};
+char buf[2][2]={ {1,2},{3,4} };
 char *p = buf;
 ```  
 
@@ -279,7 +277,7 @@ warning: initialization from incompatible pointer type [-Wincompatible-pointer-t
 
 代码2：
 ```  
-char buf[2][2]={{1,2},{3,4}};
+char buf[2][2]={ {1,2},{3,4} };
 char (*p)[2] = buf;
 ```  
 编译结果：
@@ -301,7 +299,7 @@ char (*p)[2] = buf;
 示例1：
 
 ```  
-char buf[2][2]={{1,2},{3,4}};
+char buf[2][2]={ {1,2},{3,4} };
 char **p = buf;
 printf("array name--buf address = %x\r\n",buf);
 printf("&buf[0] address = %x\r\n",&buf[0]);
@@ -324,7 +322,7 @@ Secondary pointer address = a836a2c0
 示例2：
 
 ```  
-char buf[2][2]={{1,2},{3,4}};
+char buf[2][2]={ {1,2},{3,4} };
 char **p = buf;
 printf("p[0] = %x\r\n",p[0]);
 ```  
@@ -347,7 +345,7 @@ p[0] = 04030201
 ```  
 #define ROW     2
 #define COLUMN  2
-char buf[ROW][COLUMN]={{1,2},{3,4}};
+char buf[ROW][COLUMN]={ {1,2},{3,4} };
 char *p = (char*)buf;
 //访问buf[x][y],即访问p[x*COLUMN+y]
 printf("buf = %d,%d,%d,%d\r\n",p[COLUMN*0+0],p[COLUMN*0+1],p[COLUMN*1+0],p[COLUMN*1+1]);
