@@ -34,7 +34,7 @@ tags:	    linux Kbuild
 
 如果我们不先了解它的框架，其中无数的 ifdef 条件语句只会让我们痛不欲生。根据上一小节中列出的框架，我们对这些部分的编译过程进行详细解析：  
   
-* 第1、2 点最常用到，通常就是对应指令 
+* 第1、2 点最常用到，通常就是对应指令
 	```
 	make menuconfig
 	make
@@ -158,7 +158,7 @@ endif # need-sub-make
 ```
 make -C DIR -f top_Makefile $(MAKECMDGOALS)
 ```
-即跳到指定 DIR 下再次执行 top Makefile。
+即跳到指定 DIR 下再次执行 top Makefile，在这种情况下，top Makefile将被进行第二次解析。  
 
 ****  
 
@@ -205,7 +205,13 @@ modules: $(vmlinux-dirs) $(if $(KBUILD_BUILTIN),vmlinux) modules.builtin
 	$(Q)$(MAKE) -f $(srctree)/scripts/Makefile.modpost
 	$(Q)$(CONFIG_SHELL) $(srctree)/scripts/modules-check.sh
 ```
-对于真正执行编译的过程，我们在后续的文章中详解，至少到这里，我们确认了命令行中 M=DIR 的用法。  
+事实上，如果指定了 M=DIR，KBUILD_EXTMOD的值为对应目录 DIR，并为KBUILD_EXTMOD创建独立于内核的文件夹MODVERDIR，然后导出 KBUILD_EXTMOD 和 MODVERDIR，就表示此次内核的编译只需要将指定目录下的目标文件编译成外部模块即可，上述的指令中起主要作用的就是：
+```
+$(Q)$(MAKE) -f $(srctree)/scripts/Makefile.modpost
+```
+将编译的控制权交给了 scripts/Makefile.modpost，该文件将被作为 Makefile 读入，根据 top Makefile导出的KBUILD_EXTMOD 和 MODVERDIR两个变量进行相应的编译工作。   
+
+scripts/Makefile.modpost实现细节部分这里就不再深究，至少到这里，我们确认了命令行中 M=DIR 的用法。  
 
 **** 
 

@@ -226,7 +226,7 @@ Makefile中的 addprefix 函数指添加前缀.
 
 
 
-好了，关于 # linux Kbuild详解系列(6)-scripts/Makefile.lib文件详解 的讨论就到此为止啦，如果朋友们对于这个有什么疑问或者发现有文章中有什么错误，欢迎留言
+好了，关于 linux Kbuild详解系列(6)-scripts/Makefile.lib文件详解 的讨论就到此为止啦，如果朋友们对于这个有什么疑问或者发现有文章中有什么错误，欢迎留言
 
 ***原创博客，转载请注明出处！***
 

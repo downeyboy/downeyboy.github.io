@@ -90,7 +90,7 @@ scripts_basic:
 	$(Q)rm -f .tmp_quiet_recordmcount
 ```
 
-由我之前的博客 Makefile.build文件详解 可知,\$(Q)\$(MAKE) \$(build)=scripts/basic 这条指令可以简化成：
+由我之前的博客 [Makefile.build文件详解](http://www.downeyboy.com/2019/06/18/Kbuild_series_7/) 可知,\$(Q)\$(MAKE) \$(build)=scripts/basic 这条指令可以简化成：
 ```
 make -f $(srctree)/scripts/Makefile.build obj=scripts/basic
 ```
@@ -134,7 +134,7 @@ menuconfig也好、oldconfig也好，都将匹配 %config 目标，以 menuconfi
 make -f $(srctree)/scripts/Makefile.build obj=scripts/kconfig menuconfig
 ```
 
-如果你有看了前面关于 Makefile.build 的解析博客，就知道，对于上述指令，编译流程是：
+如果你有看了前面关于 [Makefile.build](http://www.downeyboy.com/2019/06/18/Kbuild_series_7/) 的解析博客，就知道，对于上述指令，编译流程是：
 1. make -f 指令将 Makefile.build 作为目标 Makefile 解析
 2. 在 Makefile.build 中解析并包含 scripts/kconfig/Makefile，同时指定编译目标 menuconfig
 3. 如果指定了 hostprogs-y ，同时进入 Makefile.host 对 hostprogs-y 部分进行处理
@@ -222,6 +222,8 @@ menuconfig: $(obj)/mconf
 	```
 	最上级的 Kconfig 文件中全是子目录，不难想到，这又是一颗树，所有子目录下的 Kconfig 文件层层关联，生成一颗 Kconfig 树，为内核配置提供参考
 * 了解了上面的知识点，就很容易猜到 conf 命令是干什么的了：它负责层层递归地解析这棵 Kconfig 树，同时，解析完这棵树肯定得留下这棵树相关的信息，这些信息就是以 .config 文件为首的一系列配置文件、头文件。主要包括：include/generated/ 下的头文件 、 include/config/ 下的头文件 .config 等等。
+
+	如果你对 conf 程序有兴趣，也可以自己尝试阅读它的源代码实现。  
 
 
 ## 其他的配置方式

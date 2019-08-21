@@ -80,7 +80,7 @@ Makefile 中的一些概念：
 ***  
 
 ### Kbuild 框架
-中间的几篇博客主要讲解了一些 Kbuild 的预备知识，说是 Kbuild 的预备知识，其实倒不如说是研究内核编译背后原理的基础掌握，只有更好地掌握了这些预备之后，才能深入到内核 Makefile 以及各种脚本的研究中。  
+中间的几篇博客主要讲解了一些 Kbuild 的预备知识，说是 Kbuild 的预备知识，其实倒不如说是研究内核编译背后原理的基础掌握，只有更好地掌握了这些预备知识之后，才能深入到内核 Makefile 以及各种脚本的研究中，否则， top Makefile 中的各种定义、引用和逻辑分支很容易就会将你劝退。    
 
 [linux Kbuild详解系列(3) - Kbuild系统框架概览](http://www.downeyboy.com/2019/06/14/Kbuild_series_3/)  
 这篇文章主要是翻译自官方文档，对 Kbuild 的框架做一个大概的介绍。  
@@ -128,9 +128,9 @@ Makefile 中的一些概念：
 
 ***  
 
-[内核Kbuild详解系列(11)-Kbuild中vmlinux以及镜像的生成(0)](http://www.downeyboy.com/2019/06/23/Kbuild_series_11/)
+[内核Kbuild详解系列(11)-Kbuild中vmlinux以及镜像的生成(0)](http://www.downeyboy.com/2019/06/23/Kbuild_series_11/)  
 
-[linux Kbuild 详解系列(12)-Kbuild中vmlinux以及镜像的生成(1)](http://www.downeyboy.com/2019/06/24/Kbuild_series_12/)
+[linux Kbuild 详解系列(12)-Kbuild中vmlinux以及镜像的生成(1)](http://www.downeyboy.com/2019/06/24/Kbuild_series_12/)  
 终于迎来了最后的目标，我们研究 Kbuild 系统的目的就是为了弄清楚内核镜像是怎么编译出来的，将在这两篇博客中得到解答。
 
 ***  
@@ -140,6 +140,8 @@ Makefile 中的一些概念：
 除了应用部分的前三篇，后面的 10 篇建议反复对照阅读，会有更好的效果。  
 
 
-
+***  
+***  
+*** 
 
 

@@ -64,11 +64,11 @@ make help
 
 **** 
 
-##### scripts/
+##### scripts目录下控制文件
 仅仅是靠 Makefile 的功能是很难完成整个内核的配置编译以及其他功能的，scripts/ 目录下有相当多的脚本对整个内核编译进行控制，其中列出几个**非常重要**的文件：
-* Kbuild.include : 定义了常用的一系列通用变量与函数，在 top Makefile 开始时就被 include 包含，作用于整个内核的编译过程。  
-* scripts/Makefile.build : 根据用户传入的参数完成真正核心的编译工作，包括编译目标的确定、递归进入子目录的编译工作等等，作用与整个内核的编译过程。   
-* scripts/Makefile.lib ：负责根据用户配置或者 top Makefile 传入的参数，对各类待编译文件进行分类处理，以确定最后需要被编译的文件、需要递归编译的子目录，将结果赋值给相应的变量以供真正的编译程序使用。  
+* [scripts/Kbuild.include](http://www.downeyboy.com/2019/06/16/Kbuild_series_5/) : 定义了常用的一系列通用变量与函数，在 top Makefile 开始时就被 include 包含，作用于整个内核的编译过程。  
+* [scripts/Makefile.build](http://www.downeyboy.com/2019/06/18/Kbuild_series_7/) : 根据用户传入的参数完成真正核心的编译工作，包括编译目标的确定、递归进入子目录的编译工作等等，作用与整个内核的编译过程。   
+* [scripts/Makefile.lib](http://www.downeyboy.com/2019/06/17/Kbuild_series_6/) ：负责根据用户配置或者 top Makefile 传入的参数，对各类待编译文件进行分类处理，以确定最后需要被编译的文件、需要递归编译的子目录，将结果赋值给相应的变量以供真正的编译程序使用。  
 * scripts/link-vmlinux.sh : 对于每一个递归进入的编译目录，编译完成之后，都将在该目录下生成一个 build-in.a 文件，这个 build-in.a 文件就是由该目录下或子目录下需要编译进内核的模块打包而成，link-vmlinux.sh 将这些文件统一链接起来，生成对应的镜像。  
 * scripts/Makefile.host : 这个文件主要控制生成主机程序，严格来说，主机程序并不主导编译过程，它只是作为一种辅助软件，比如 menuconfig 在编译主机上的界面实现，fixdep 检查工具(检查头文件依赖)等等。 
 

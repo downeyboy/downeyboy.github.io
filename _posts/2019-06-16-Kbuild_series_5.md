@@ -66,7 +66,7 @@ menuconfig: scripts_basic outputmakefile FORCE
 #### obj=scripts/kconfig部分
 给目标makfile中 obj 变量赋值为scripts/kconfig，具体的处理在scripts/Makefile.build中。  
 
-事实上，在 scripts/Makefile.build 的处理中，会在 obj 所对应的目录中寻找 Kbuild 或者 Makefile 文件，并包含它。  
+事实上，在 [scripts/Makefile.build](http://www.downeyboy.com/2019/06/18/Kbuild_series_7/) 的处理中，会在 obj 所对应的目录中寻找 Kbuild 或者 Makefile 文件，并包含它。  
 
 因为包含的语句在 scripts/Makefile.build 第一个有效目标之前，所以当不指定 make 的目标时，将执行被包含的 Kbuild 或者 Makefile 中的默认目标，如果没有 Kbuild 或者 Makefile 文件或者文件中不存在目标，就会执行 scripts/Makefile.build 中的默认目标 __build。  
 
@@ -231,7 +231,7 @@ include/config/kernel.release: FORCE
 
 ***  
 
-好了，关于# linux Kbuild详解系列(5)-scripts/KBuild.include文件详解 的讨论就到此为止啦，如果朋友们对于这个有什么疑问或者发现有文章中有什么错误，欢迎留言
+好了，关于 linux Kbuild详解系列(5)-scripts/KBuild.include文件详解 的讨论就到此为止啦，如果朋友们对于这个有什么疑问或者发现有文章中有什么错误，欢迎留言
 
 ***原创博客，转载请注明出处！***
 
