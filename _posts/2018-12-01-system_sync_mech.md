@@ -213,6 +213,8 @@ PowerPC上则是lwsync。我们把内存屏障指令插入不想被优化的指�
 在多核系统中，由于CPU乱序执行可能带来的问题，产生了内存屏障机制，以防止内存优化带来的问题。  
 
 
+***  
+
 参考：http://www.voidcn.com/article/p-fiewgxpd-bbh.html   
 
 《程序员的自我修养--链接、装载与库》
