@@ -222,7 +222,7 @@ device-tree strings：在dtb中有大量的重复字符串，比如"model","comp
 
 ![](https://raw.githubusercontent.com/linux-downey/bloc_test/master/article/linux_driver/dtb_format/dtb_struct.png)  
 
-整个dtb文件还是比较简单的，图中的红色框出的部分为header部分的数据，可以看到：
+整个dtb文件还是比较简单的，图中的红色框出的部分为 header 部分的数据，可以看到：
 
 
 ```  
