@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
 title:      linux 设备树系列
-subtitle:      - dtb转换成device_node
+subtitle:      -dtb转换成device_node
 date:       2019-03-02				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
@@ -447,7 +447,7 @@ struct device_node {
 
 好了，关于linux设备树节点转换成device_node过程的讨论就到此为止啦，如果朋友们对于这个有什么疑问或者发现有文章中有什么错误，欢迎留言
 
-设备树的解析后续device_node转换成platform_device可以参考另一篇博客:[linux设备树--device_node转换成platform_device](https://www.cnblogs.com/downey-blog/p/10486568.html)  
+设备树的解析后续device_node转换成platform_device可以参考另一篇博客:[linux设备树--device_node转换成platform_device](http://www.downeyboy.com/2019/03/05/device_node_to_platform/)  
 
 ***原创博客，转载请注明出处！***
 

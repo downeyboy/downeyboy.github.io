@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
 title:      linux 设备树系列
-subtitle:      - 设备树二级以上级子节点的转换
+subtitle:      -设备树二级以上级子节点的转换
 date:       2019-03-07				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	

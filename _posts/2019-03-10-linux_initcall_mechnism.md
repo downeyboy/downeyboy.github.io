@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
 title:      linux的initcall机制
-subtitle:      - 针对编译进内核的驱动
+subtitle:      -针对编译进内核的驱动
 date:       2019-03-10				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
@@ -243,7 +243,7 @@ for (fn = initcall_levels[level]; fn < initcall_levels[level+1]; fn++)
 do_one_initcall(*fn);
 ```  
 
-fn为函数指针，fn++相当于函数指针+1，相当于：内存地址+sizeof(fn)，sizeof(fn)根据平台不同而不同，一般来说，32位机上是4字节，64位机则是8字节(关于指针在操作系统中的大小可以参考另一篇博客：[不同平台下指针大小](https://www.cnblogs.com/downey-blog/p/10469977.html) )。  
+fn为函数指针，fn++相当于函数指针+1，相当于：内存地址+sizeof(fn)，sizeof(fn)根据平台不同而不同，一般来说，32位机上是4字节，64位机则是8字节(关于指针在操作系统中的大小可以参考另一篇博客：[不同平台下指针大小](http://www.downeyboy.com/2018/09/28/Width_of_system_bus/) )。  
 
 而initcall_levels[level]指向当前".initcall##level##s.init"段，initcall_levels[level+1]指向".initcall##(level+1)##s.init"段,两个段之间的内存就是存放所有添加的函数指针。  
 也就是从".initcall##level##s.init"段开始，每次取一个函数出来执行，并累加指针，直到取完。  

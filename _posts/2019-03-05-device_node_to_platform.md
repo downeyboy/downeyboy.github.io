@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
 title:      linux 设备树系列
-subtitle:      - device_node转换成platform_device
+subtitle:      -device_node转换成platform_device
 date:       2019-03-05				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
@@ -39,7 +39,7 @@ tags:	    linux linux设备驱动程序
 
 例如，有这么一个struct platform_device* of_test.我们可以直接通过of_test->dev.of_node来访问设备树中的信息.  
 
-**设备树节点到device_node的转换参考一篇博客:[设备树dtb到device_node的转换](https://www.cnblogs.com/downey-blog/p/10485596.html).**  
+**设备树节点到device_node的转换参考一篇博客:[设备树dtb到device_node的转换](http://www.downeyboy.com/2019/03/02/device_tree_parse_1/).**  
 
 大体流程讲完了，接下来从源代码中进行求证。  
 
@@ -83,7 +83,7 @@ __attribute__((__section__(".initcall" #id ".init"))) = fn;
 
 
 即放入到".initcalln.init"中，n代表优先级，当系统启动时，会依次调用这些段中的函数。
-**(详细了解linux的initcall机制可以参考我的另一篇博客：[linux的initcall机制](https://www.cnblogs.com/downey-blog/p/10486653.html))**   
+**(详细了解linux的initcall机制可以参考我的另一篇博客：[linux的initcall机制](http://www.downeyboy.com/2019/03/10/linux_initcall_mechnism/))**   
 
 下面我们就进入到of_platform_default_populate_init()中，查看它的执行过程：
 

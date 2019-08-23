@@ -284,8 +284,8 @@ device-tree strings：在dtb中有大量的重复字符串，比如"model","comp
 
 关于linux设备树在内核启动时的解析可以参考我的另外两篇博客:  
 
-[linux设备树的解析--dtb转换成device_node](https://www.cnblogs.com/downey-blog/p/10485596.html)   
-[linux设备树的解析--device_node转换成platform_deviec](https://www.cnblogs.com/downey-blog/p/10486568.html)  
+[linux设备树的解析--dtb转换成device_node](http://www.downeyboy.com/2019/03/02/device_tree_parse_1/)   
+[linux设备树的解析--device_node转换成platform_deviec](http://www.downeyboy.com/2019/03/05/device_node_to_platform/)  
 
 ***原创博客，转载请注明出处！***
 
