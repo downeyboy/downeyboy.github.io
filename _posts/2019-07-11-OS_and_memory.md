@@ -6,7 +6,7 @@ date:       2019-07-11
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
-tags:	    计算机原理  加密算法
+tags:	    操作系统原理 
 --- 
 ****  
 
