@@ -104,7 +104,7 @@ Tips：
 所以我们要从python变量内存角度来理解：对象1和对象5早就在内存中存在，而变量x先是指向1的标签，在赋值后变成了指向5的标签。  
 
 
-更多内存细节可以参考我另一篇博客：[python变量的内存机制](https://www.cnblogs.com/downey-blog/p/10482955.html) 。
+更多内存细节可以参考我另一篇博客：[python变量的内存机制](http://www.downeyboy.com/2019/06/08/python_var_memory_mechanism/) 。
 
 
 ****  
