@@ -1,5 +1,14 @@
+---
+layout:     post   				    
+title:      linux字符设备驱动程序 
+subtitle:      -创建设备节点
+date:       2019-03-02				
+author:     Downeyboy 				
+header-img: img/blog-post-bg.jpg	
+catalog: true 					
+tags:	    linux linux设备驱动程序
+---
 
-****  
 
 # linux字符设备驱动程序--创建设备节点
 ***基于4.14内核,运行在beagleBone green***
