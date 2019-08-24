@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
 title:      linux sysfs文件系统
-subtitle:      -hello_world
+subtitle:     
 date:       2019-03-03				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
@@ -486,3 +486,4 @@ kobject描述部分参考[大牛的博客](http://www.wowotech.net/device_model/
 ***原创博客，转载请注明出处！***
 
 祝各位早日实现项目丛中过，bug不沾身.
+
