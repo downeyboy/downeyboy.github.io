@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
 title:      linux 设备树系列
-subtitle:      - linux设备树dtb格式
+subtitle:      -linux设备树dtb格式
 date:       2019-03-01				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
