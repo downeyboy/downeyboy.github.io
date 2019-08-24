@@ -6,7 +6,7 @@ date:       2019-03-03
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
-tags:	    linux linux内核接口
+tags:	    linux linux设备驱动程序
 ---
 
 # linux sysfs文件系统

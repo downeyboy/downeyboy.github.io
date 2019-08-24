@@ -6,7 +6,7 @@ date:       2019-03-02
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					
-tags:	    linux linux内核接口
+tags:	    linux linux设备驱动程序
 ---
 
 
@@ -329,3 +329,4 @@ holders   initstate  parameters  sections  taint       version
 ***原创博客，转载请注明出处！***
 
 祝各位早日实现项目丛中过，bug不沾身.
+
