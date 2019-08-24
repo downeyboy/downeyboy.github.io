@@ -328,9 +328,6 @@ Dec 20 14:12:55 beaglebone kernel: [  433.073335] Send file!!
 recv data = Downey!
 ```  
 
-
-
-
 ****  
 
 ## linux设备节点访问权限
