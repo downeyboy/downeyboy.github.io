@@ -2,7 +2,7 @@
 layout:     post   				    
 title:      不同平台下int类型、指针类型的数据大小	
 subtitle:      
-date:       2018-09-28 				
+date:       2019-06-28 				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
 catalog: true 					

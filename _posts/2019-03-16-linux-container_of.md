@@ -1,7 +1,7 @@
 ---
 layout:     post   				    
-title:      linux 内核接口 
-subtitle:      -container_of 宏解析
+title:      linux 内核 container_of 宏解析
+subtitle:      
 date:       2019-03-16				
 author:     Downeyboy 				
 header-img: img/blog-post-bg.jpg	
