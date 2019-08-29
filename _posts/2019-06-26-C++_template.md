@@ -205,7 +205,7 @@ main.cpp保持不变：
 #include "test.h"
 int main()
 {
-string str("downey");
+    string str("downey");
     int i=5;
     func(str,5);
 }
